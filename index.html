@@ -1,27 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bulma.min.css">
-    <title>Mis Ideas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bulma.min.css">
+  <title>Mis Ideas</title>
 </head>
+
 <body>
-    <div id="app" style="padding: 2em;">
+  <div id="app" style="padding: 2em;">
+    <section class="hero">
+      <div class="hero-body">
+        <p class="title">Mis ideas</p>
+        <p class="subtitle">Proyecto Vue.js basico</p>
+      </div>
+    </section>
+    <div class="columns">
+      <div class="column">
         <section class="hero">
-            <div class="hero-body">
-              <p class="title">Mis ideas</p>
-              <p class="subtitle">Proyecto Vue.js basico</p>
+          <div class="hero-body">
+            <p class="subtitle">Ingresa formulario</p>
+          </div>
+
+          <!-- Campo para el nombre de la idea -->
+          <div class="field">
+            <label class="label" for="nombre-idea">Nombre Idea</label>
+            <div class="control">
+              <input class="input" id="nombre-idea" type="text" placeholder="Ingrese ideas">
             </div>
+          </div>
+
+          <!-- Campo para la importancia de la idea -->
+          <div class="field">
+            <label class="label" for="importancia-idea">Importancia Idea</label>
+            <div class="control">
+              <div class="select">
+                <select id="importancia-idea">
+                  <option value="" disabled selected>Seleccione Importancia</option>
+                  <option value="importante">Importante</option>
+                  <option value="muy-importante">Muy Importante</option>
+                  <option value="sumamente-importante">Sumamente Importante</option>
+                </select>
+              </div>
+            </div>
+            
+
+          </div>
+<!-- Botón de envío -->
+<button class="button is-link">Normal</button>
         </section>
-          <div class="columns">
-            <div class="column">Aqui el formulario de ideas</div>
-            <div class="column">Lista de ideas</div>
-          </div>  
+      </div>
+
+
+      <div class="column">
+        <section class="hero">
+          <div class="hero-body">
+            <p class="subtitle">Lista de ideas</p>
+            <div class="field">
+              <label class="label" for="nombre-idea">Nombre Idea</label>
+              <div class="control">
+                <input class="input" id="nombre-idea" type="text" placeholder="Ingrese ideas">
+              </div>
+            </div>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Idea</th>
+                  <th>Prioridad</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v.for="n in 10">
+                  <td><span class="tag is-warning">Idea</span></td>
+                  <td><span class="tag is-warning">Importancia</span></td>
+                  <td><span class="tag is-warning">Acciones</span></td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
+      </div>
     </div>
-
-
-
-    <script type="text/javascript" src="/vue.global.js"></script>
+  
+  </div>
+  
+  <script type="text/javascript" src="/vue.global.js"></script>
+  <script type="text/javascript" src="/ideas.js"></script>
 </body>
+
 </html>

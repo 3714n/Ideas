@@ -1,8 +1,3 @@
-/**
-* vue v3.4.38
-* (c) 2018-present Yuxi (Evan) You and Vue contributors
-* @license MIT
-**/
 var Vue = (function (exports) {
   'use strict';
 
